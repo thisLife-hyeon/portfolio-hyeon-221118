@@ -60,6 +60,7 @@ li {
 }
 
 a {
+  font-size: 1.6rem;
   text-decoration: none;
   color: #000;
 }
@@ -82,10 +83,82 @@ a:hover {
   html {
     font-size: 5px;
   }
+  .main__pallex .pallex__layer3 {
+    margin-top: -100%;
+  }
+  .main__pallex .pallex__layer4 {
+    margin-top: -100%;
+  }
+  .profile {
+    flex-direction: column;
+    margin-bottom: 40rem;
+    height: 90vh;
+  }
+  .profile__skills {
+    margin-bottom: 10rem;
+  }
+  .profile__visual {
+    margin-bottom: 40rem;
+  }
+  .market,
+.illust,
+.motion {
+    flex-direction: column;
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+  }
+  .illust {
+    flex-direction: column-reverse;
+  }
 }
 @media (max-width: 480px) {
   html {
     font-size: 4px;
+  }
+  .main__pallex .pallex__layer3 {
+    margin-top: -100%;
+  }
+  .main__pallex .pallex__layer4 {
+    margin-top: -100%;
+  }
+  .profile {
+    flex-direction: column;
+    margin-bottom: 40rem;
+    height: 90vh;
+  }
+  .profile__skills {
+    margin-bottom: 10rem;
+  }
+  .profilevisual {
+    margin-bottom: 10rem;
+  }
+  .market,
+.illust,
+.motion {
+    flex-direction: column;
+    margin-top: 20rem;
+    margin-bottom: 40rem;
+  }
+  .illust {
+    flex-direction: column-reverse;
+  }
+  .popup_uiux__close,
+.popup_illust__close,
+.popup_motion__close,
+.popup1__close,
+.popup2__close,
+.popup3__close,
+.popup4__close,
+.popup5__close,
+.popup6__close,
+.popup7__close,
+.popup8__close,
+.popup9__close {
+    font-size: 3rem;
+  }
+  .footer {
+    flex-direction: row;
+    height: 100rem;
   }
 }
 .popup_uiux,
@@ -109,41 +182,6 @@ a:hover {
   z-index: 999;
   visibility: hidden;
   transition: all 0.3s;
-}
-.popup_uiux .modal,
-.popup_illust .modal,
-.popup_motion .modal,
-.popup1 .modal,
-.popup2 .modal,
-.popup3 .modal,
-.popup4 .modal,
-.popup5 .modal,
-.popup6 .modal,
-.popup7 .modal,
-.popup8 .modal,
-.popup9 .modal {
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-.popup_uiux a,
-.popup_illust a,
-.popup_motion a,
-.popup1 a,
-.popup2 a,
-.popup3 a,
-.popup4 a,
-.popup5 a,
-.popup6 a,
-.popup7 a,
-.popup8 a,
-.popup9 a {
-  text-decoration: none;
-  color: #d9d9d9;
 }
 .popup_uiux:target,
 .popup_illust:target,
@@ -172,26 +210,31 @@ a:hover {
 .popup7__content,
 .popup8__content,
 .popup9__content {
-  width: 120rem;
-  height: 90vh;
+  width: 76vw;
+  height: 80vh;
+  margin: 10vh auto;
   background-color: #fff;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-.popup_uiux__img,
-.popup_illust__img,
-.popup_motion__img,
-.popup1__img,
-.popup2__img,
-.popup3__img,
-.popup4__img,
-.popup5__img,
-.popup6__img,
-.popup7__img,
-.popup8__img,
-.popup9__img {
-  display: block;
-  height: 90vh;
+.popup_uiux__content img,
+.popup_illust__content img,
+.popup_motion__content img,
+.popup1__content img,
+.popup2__content img,
+.popup3__content img,
+.popup4__content img,
+.popup5__content img,
+.popup6__content img,
+.popup7__content img,
+.popup8__content img,
+.popup9__content img {
+  width: 76vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 .popup_uiux__close,
 .popup_illust__close,
@@ -206,29 +249,14 @@ a:hover {
 .popup8__close,
 .popup9__close {
   border-radius: 50%;
-  color: #d9d9d9;
+  color: #ff24bd;
   z-index: 1000;
   font-size: 5rem;
   font-weight: 300;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 2vh;
+  right: 10vw;
   padding-right: 1.2rem;
-  margin-top: -1rem;
-}
-.popup_uiux__close:hover,
-.popup_illust__close:hover,
-.popup_motion__close:hover,
-.popup1__close:hover,
-.popup2__close:hover,
-.popup3__close:hover,
-.popup4__close:hover,
-.popup5__close:hover,
-.popup6__close:hover,
-.popup7__close:hover,
-.popup8__close:hover,
-.popup9__close:hover {
-  color: #ff24bd;
 }
 
 :root {
@@ -310,35 +338,39 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 1px;
-  margin-top: -80rem;
-}
-.wrapper .main__pallex .pallex {
   position: absolute;
-  top: 0;
+  top: 20%;
   right: 0;
   bottom: 0;
   left: 0;
 }
+.wrapper .main__pallex .pallex {
+  position: absolute;
+}
 .wrapper .main__pallex .pallex__layer1 {
   transform: translateZ(0);
   width: 104rem;
+  height: 40rem;
   left: 40%;
 }
 .wrapper .main__pallex .pallex__layer2 {
   transform: translateZ(-0.5px);
   width: 180rem;
+  height: 60rem;
   top: 10%;
   left: 80%;
 }
 .wrapper .main__pallex .pallex__layer5 {
   transform: translateZ(-1px);
   width: 180rem;
+  height: 100rem;
   top: 10%;
   left: -60%;
 }
 .wrapper .main__pallex .pallex__layer3 {
   transform: translateZ(-2px);
   width: 600rem;
+  height: 50rem;
   top: 100%;
   left: -110%;
 }
@@ -376,7 +408,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 12rem;
+  margin-left: 6%;
   height: 90em;
 }
 .profile__skills h4 {
@@ -558,7 +590,7 @@ body {
   width: 80rem;
   height: 40rem;
   position: relative;
-  margin-left: 30rem;
+  margin-left: 18%;
 }
 .illust__txt p {
   line-height: 1.8;
@@ -616,11 +648,12 @@ body {
 
 .artworks {
   width: 100vw;
-  height: 96vh;
+  height: 90rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  overflow: hidden;
 }
 .artworks__box {
   width: 32rem;
@@ -629,7 +662,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 40px;
+  border-radius: 4rem;
   margin-left: 20px;
 }
 .artworks__top {
@@ -687,11 +720,16 @@ body {
 }
 .artworks .bg_line {
   width: 100vw;
-  height: 96rem;
+  height: 120vh;
   position: absolute;
   top: -24%;
   left: 0;
   z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/line.svg);
+  background-size: cover;
 }
 
 .footer {
@@ -723,4 +761,35 @@ body {
 .footer__contact li {
   font-size: 2.2rem;
   line-height: 1.8;
+}
+.footer__info {
+  position: absolute;
+  top: 40%;
+  right: 12%;
+}
+.footer__info li {
+  font-size: 2.2rem;
+  line-height: 1.8;
+}
+
+/*scroll bar custom*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

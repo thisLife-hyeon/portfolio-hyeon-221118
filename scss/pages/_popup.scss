@@ -20,54 +20,52 @@
   visibility: hidden;
   transition: all 0.3s;
 
-  .modal {
-    width: 100%;
-    height: 90vh;
-    // margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  a {
-    text-decoration: none;
-    color: $color--gray1;
-  }
-
   &:target {
     opacity: 1;
     visibility: visible;
   }
+
   &__content {
-    // @include absCenter;
-    width: 120rem;
-    height: 90vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 76vw;
+    height: 80vh;
+
+    margin: 10vh auto;
 
     background-color: $color--white;
     box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.2);
-    border-radius: 3px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    img {
+      width: 76vw;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
   }
-  &__img {
-    display: block;
-    height: 90vh;
-  }
+
+  // &__img {
+  //   display: block;
+  //   height: 90vh;
+  // }
   &__close {
     // display: inline-block;
     border-radius: 50%;
-    color: $color--gray1;
+    color: $color--pink;
     z-index: 1000;
     font-size: 5rem;
     font-weight: 300;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 2vh;
+    right: 10vw;
     padding-right: 1.2rem;
-    margin-top: -1rem;
 
-    &:hover {
-      color: $color--pink;
-    }
+    // &:hover {
+    //   color: $color--pink;
+    // }
   }
 }

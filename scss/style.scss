@@ -101,21 +101,22 @@ body {
 
       perspective: 1px;
 
-      margin-top: -80rem;
+      position: absolute;
+      top: 20%;
+      right: 0;
+      bottom: 0;
+      left: 0;
 
       // z-index: 1;
 
       .pallex {
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
 
         //moon
         &__layer1 {
           transform: translateZ(0);
           width: 104rem;
+          height: 40rem;
           left: 40%;
         }
 
@@ -123,6 +124,7 @@ body {
         &__layer2 {
           transform: translateZ(-0.5px);
           width: 180rem;
+          height: 60rem;
           top: 10%;
           left: 80%;
         }
@@ -130,6 +132,7 @@ body {
         &__layer5 {
           transform: translateZ(-1px);
           width: 180rem;
+          height: 100rem;
           top: 10%;
           left: -60%;
         }
@@ -138,6 +141,7 @@ body {
         &__layer3 {
           transform: translateZ(-2px);
           width: 600rem;
+          height: 50rem;
           top: 100%;
           left: -110%;
         }
@@ -187,7 +191,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     // align-items: center;
-    margin-left: 12rem;
+    margin-left: 6%;
     height: 90em;
     // background-color: thistle;
 
@@ -336,6 +340,7 @@ body {
 //학식 앱 리뉴얼..일러로 바꿀까 고민되긴 함
 .illust {
   @include work;
+  // flex-direction: row-reverse;
 
   &__visual {
     @include work--visual;
@@ -356,7 +361,7 @@ body {
 
   &__txt {
     @include work--txt;
-    margin-left: 30rem;
+    margin-left: 18%;
   }
 }
 
@@ -388,19 +393,21 @@ body {
 
 .artworks {
   width: 100vw;
-  height: 96vh;
+  height: 90rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 
   position: relative;
 
+  overflow: hidden;
+
   &__box {
     width: 32rem;
     height: 32rem;
     background-color: $color--gray2;
     @include bgimg;
-    border-radius: 40px;
+    border-radius: 4rem;
     margin-left: 20px;
   }
 
@@ -468,11 +475,15 @@ body {
   }
   .bg_line {
     width: 100vw;
-    height: 96rem;
+    height: 120vh;
     position: absolute;
     top: -24%;
     left: 0;
     z-index: -1;
+
+    @include bgimg;
+    background-image: url(../img/line.svg);
+    background-size: cover;
   }
 }
 
@@ -512,4 +523,37 @@ body {
       line-height: 1.8;
     }
   }
+
+  &__info {
+    position: absolute;
+    top: 40%;
+    right: 12%;
+
+    li {
+      font-size: 2.2rem;
+      line-height: 1.8;
+    }
+  }
+}
+
+/*scroll bar custom*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color--lightgray1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

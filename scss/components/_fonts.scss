@@ -32,6 +32,7 @@ li {
   list-style: none;
 }
 a {
+  font-size: 1.6rem;
   text-decoration: none;
   color: $color--black;
 
@@ -57,9 +58,114 @@ a {
   html {
     font-size: 5px;
   }
+
+  .main__pallex {
+    // background-color: rgba($color: #000000, $alpha: 0.1);
+
+    .pallex {
+      // background-color: rgba($color: #8457cd, $alpha: 0.2);
+
+      &__layer3 {
+        margin-top: -100%;
+      }
+      &__layer4 {
+        margin-top: -100%;
+      }
+    }
+  }
+
+  .profile {
+    flex-direction: column;
+    margin-bottom: 40rem;
+    height: 90vh;
+
+    &__skills {
+      margin-bottom: 10rem;
+    }
+
+    &__visual {
+      margin-bottom: 40rem;
+    }
+  }
+
+  .market,
+  .illust,
+  .motion {
+    flex-direction: column;
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+  }
+
+  .illust {
+    flex-direction: column-reverse;
+  }
 }
+
 @media (max-width: 480px) {
   html {
     font-size: 4px;
+  }
+
+  .main__pallex {
+    // background-color: rgba($color: #000000, $alpha: 0.1);
+
+    .pallex {
+      // background-color: rgba($color: #cd5757, $alpha: 0.2);
+
+      &__layer3 {
+        margin-top: -100%;
+      }
+      &__layer4 {
+        margin-top: -100%;
+      }
+    }
+  }
+
+  .profile {
+    flex-direction: column;
+    margin-bottom: 40rem;
+    height: 90vh;
+
+    &__skills {
+      margin-bottom: 10rem;
+    }
+
+    &visual {
+      margin-bottom: 10rem;
+    }
+  }
+
+  .market,
+  .illust,
+  .motion {
+    flex-direction: column;
+    margin-top: 20rem;
+    margin-bottom: 40rem;
+  }
+
+  .illust {
+    flex-direction: column-reverse;
+  }
+
+  .popup_uiux,
+  .popup_illust,
+  .popup_motion,
+  .popup1,
+  .popup2,
+  .popup3,
+  .popup4,
+  .popup5,
+  .popup6,
+  .popup7,
+  .popup8,
+  .popup9 {
+    &__close {
+      font-size: 3rem;
+    }
+  }
+
+  .footer {
+    flex-direction: row;
+    height: 100rem;
   }
 }
