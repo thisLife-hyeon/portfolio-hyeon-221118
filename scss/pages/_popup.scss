@@ -1,6 +1,7 @@
 .popup_uiux,
 .popup_illust,
 .popup_motion,
+.popup_video,
 .popup1,
 .popup2,
 .popup3,
@@ -34,7 +35,7 @@
 
     margin: 10vh auto;
 
-    background-color: $color--white;
+    background-color: $color--black;
     box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.2);
     border-radius: 10px;
     overflow-y: scroll;
@@ -44,6 +45,14 @@
       width: 76vw;
       display: flex;
       align-items: flex-start;
+      justify-content: center;
+    }
+
+    video {
+      width: 94%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
       justify-content: center;
     }
   }

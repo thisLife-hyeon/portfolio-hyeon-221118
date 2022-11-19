@@ -17,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // transition: background 1s ease;
+  transition: background 1s ease;
   width: 100vw;
   scroll-behavior: smooth;
 }
@@ -417,7 +417,7 @@ body {
     position: relative;
     left: 14%;
 
-    animation: rolling-right 100s linear infinite;
+    animation: rolling-right 130s linear infinite;
     will-change: transform;
     // position: relative;
     white-space: nowrap;
@@ -451,7 +451,7 @@ body {
     width: 200rem;
     height: 32rem;
 
-    animation: rolling-left 100s linear infinite;
+    animation: rolling-left 130s linear infinite;
     will-change: transform;
     // position: relative;
     white-space: nowrap;
@@ -507,7 +507,7 @@ body {
     margin-top: -32rem;
 
     // position: absolute;
-    animation: text-scrolling 14s linear infinite;
+    animation: text-scrolling 30s linear infinite;
     will-change: transform;
     // position: relative;
     white-space: nowrap;
