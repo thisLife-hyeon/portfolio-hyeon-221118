@@ -88,7 +88,18 @@ a:hover {
     font-size: 4px;
   }
 }
-.pop {
+.popup_uiux,
+.popup_illust,
+.popup_motion,
+.popup1,
+.popup2,
+.popup3,
+.popup4,
+.popup5,
+.popup6,
+.popup7,
+.popup8,
+.popup9 {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -96,11 +107,21 @@ a:hover {
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
-  opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
 }
-.pop .modal {
+.popup_uiux .modal,
+.popup_illust .modal,
+.popup_motion .modal,
+.popup1 .modal,
+.popup2 .modal,
+.popup3 .modal,
+.popup4 .modal,
+.popup5 .modal,
+.popup6 .modal,
+.popup7 .modal,
+.popup8 .modal,
+.popup9 .modal {
   width: 100%;
   height: 90vh;
   display: flex;
@@ -109,27 +130,81 @@ a:hover {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.pop a {
+.popup_uiux a,
+.popup_illust a,
+.popup_motion a,
+.popup1 a,
+.popup2 a,
+.popup3 a,
+.popup4 a,
+.popup5 a,
+.popup6 a,
+.popup7 a,
+.popup8 a,
+.popup9 a {
   text-decoration: none;
   color: #d9d9d9;
 }
-.pop:target {
+.popup_uiux:target,
+.popup_illust:target,
+.popup_motion:target,
+.popup1:target,
+.popup2:target,
+.popup3:target,
+.popup4:target,
+.popup5:target,
+.popup6:target,
+.popup7:target,
+.popup8:target,
+.popup9:target {
   opacity: 1;
   visibility: visible;
 }
-.pop__content {
+.popup_uiux__content,
+.popup_illust__content,
+.popup_motion__content,
+.popup1__content,
+.popup2__content,
+.popup3__content,
+.popup4__content,
+.popup5__content,
+.popup6__content,
+.popup7__content,
+.popup8__content,
+.popup9__content {
   width: 120rem;
   height: 90vh;
-  margin: 5vh auto;
   background-color: #fff;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
-.pop__img {
+.popup_uiux__img,
+.popup_illust__img,
+.popup_motion__img,
+.popup1__img,
+.popup2__img,
+.popup3__img,
+.popup4__img,
+.popup5__img,
+.popup6__img,
+.popup7__img,
+.popup8__img,
+.popup9__img {
   display: block;
   height: 90vh;
 }
-.pop__close {
+.popup_uiux__close,
+.popup_illust__close,
+.popup_motion__close,
+.popup1__close,
+.popup2__close,
+.popup3__close,
+.popup4__close,
+.popup5__close,
+.popup6__close,
+.popup7__close,
+.popup8__close,
+.popup9__close {
   border-radius: 50%;
   color: #d9d9d9;
   z-index: 1000;
@@ -141,7 +216,18 @@ a:hover {
   padding-right: 1.2rem;
   margin-top: -1rem;
 }
-.pop__close:hover {
+.popup_uiux__close:hover,
+.popup_illust__close:hover,
+.popup_motion__close:hover,
+.popup1__close:hover,
+.popup2__close:hover,
+.popup3__close:hover,
+.popup4__close:hover,
+.popup5__close:hover,
+.popup6__close:hover,
+.popup7__close:hover,
+.popup8__close:hover,
+.popup9__close:hover {
   color: #ff24bd;
 }
 
@@ -149,10 +235,15 @@ a:hover {
   --circles: rgb(255, 221, 177);
 }
 
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   box-sizing: border-box;
   width: 100vw;
   scroll-behavior: smooth;
@@ -416,7 +507,6 @@ body {
   background-color: #adadad;
   transition: all 0.5s;
   background-image: url(../img/pro_market.jpg);
-
 }
 .market__visual:hover .zoomin, .market__visual:focus .zoomin {
   transform: scale(1.2);
@@ -464,7 +554,6 @@ body {
 .illust__visual:hover .zoomin, .illust__visual:focus .zoomin {
   transform: scale(1.2);
 }
-
 .illust__txt {
   width: 80rem;
   height: 40rem;
@@ -503,9 +592,7 @@ body {
   background-size: cover;
   background-color: #adadad;
   transition: all 0.5s;
-
   background-image: url(../img/pro-motion.jpg);
-
 }
 .motion__visual:hover .zoomin, .motion__visual:focus .zoomin {
   transform: scale(1.2);
@@ -557,6 +644,10 @@ body {
 .artworks__top ul {
   display: flex;
 }
+.artworks__top li {
+  width: 32rem;
+  height: 32rem;
+}
 .artworks__top--luka {
   background-image: url(../img/pro_luka.jpg);
 }
@@ -607,27 +698,22 @@ body {
   width: 100vw;
   height: 54rem;
   background: url(../img/bg_gra3.svg);
-
   color: #fff;
   display: flex;
   position: relative;
 }
-
 .footer::before {
-
   content: "";
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   background-size: contain;
   background-image: url(../img/contactme.svg);
   margin-top: -32rem;
   animation: text-scrolling 14s linear infinite;
   will-change: transform;
   white-space: nowrap;
-
 }
 .footer__contact {
   position: absolute;
@@ -636,18 +722,5 @@ body {
 }
 .footer__contact li {
   font-size: 2.2rem;
-  line-height: 1.8;
-}
-.footer__contact h3 {
-  font-size: 4.8rem;
-}
-.footer__info {
-  position: absolute;
-  top: 54%;
-  right: 12%;
-  text-align: right;
-}
-.footer__info li {
-  font-size: 1.8rem;
   line-height: 1.8;
 }
